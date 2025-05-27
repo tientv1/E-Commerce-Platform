@@ -1,16 +1,34 @@
 services:
-    user-ui:
+    buyer-ui:
+        container_name: buyer-ui
         build:
-            context: ./user-ui
+            context: ./buyer-ui
         volumes:
-            - ./user-ui:/app
+            - ./buyer-ui:/app
+            - /app/node_modules
+        ports:
+            - "3000:3000"
+        env_file:
+            - ./buyer-ui/.env
+        networks:
+            - tientv-ecommerce
+
+    seller-ui:
+        container_name: seller-ui
+        build:
+            context: ./seller-ui
+        volumes:
+            - ./seller-ui:/app
             - /app/node_modules
         ports:
             - "3001:3000"
-        environment:
-            - NODE_ENV=development
+        env_file:
+            - ./seller-ui/.env
+        networks:
+            - tientv-ecommerce
 
     admin-ui:
+        container_name: admin-ui
         build:
             context: ./admin-ui
         volumes:
@@ -18,5 +36,11 @@ services:
             - /app/node_modules
         ports:
             - "3002:3000"
-        environment:
-            - NODE_ENV=development
+        env_file:
+            - ./admin-ui/.env
+        networks:
+            - tientv-ecommerce
+
+networks:
+    tientv-ecommerce:
+        driver: bridge
