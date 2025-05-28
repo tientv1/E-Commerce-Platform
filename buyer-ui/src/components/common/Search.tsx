@@ -7,14 +7,14 @@ export default function Search() {
             <input
                 name="search"
                 type="text"
-                placeholder="Search..."
+                placeholder="Tìm kiếm..."
                 className="outline-none flex-1 text-[#808089] border-r border-[#dddde3] text-[14px] "
             />
             <button
                 type="submit"
                 className="cursor-pointer h-full hover:bg-[#02735e2d] px-3 text-[14px] text-[#02735E]"
             >
-                Search
+                Tìm kiếm
             </button>
         </div>
     );
