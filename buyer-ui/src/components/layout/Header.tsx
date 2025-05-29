@@ -19,7 +19,7 @@ export default function Header() {
                         icon={<ShoppingCart size={20} />}
                     />
                     <Button
-                        url="/account"
+                        url="/login"
                         text="Tài khoản"
                         icon={<CircleUserIcon size={20} />}
                     />

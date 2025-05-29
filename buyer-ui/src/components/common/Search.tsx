@@ -12,7 +12,7 @@ export default function Search() {
             />
             <button
                 type="submit"
-                className="cursor-pointer h-full hover:bg-[#02735e2d] px-3 text-[14px] text-[#02735E]"
+                className="cursor-pointer h-full hover:bg-[#02735e2d] px-3 text-[14px] text-[#02735E] focus:outline-none"
             >
                 Tìm kiếm
             </button>
