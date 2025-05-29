@@ -7,8 +7,8 @@ export default function Logo() {
             <Image
                 src="/brand-icon.svg"
                 alt="Logo"
-                width={75}
-                height={75}
+                width={50}
+                height={50}
                 priority
             />
         </Link>
