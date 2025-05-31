@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import LoginForm from "./LoginForm";
 import SocialLogin from "./SocialLogin";
 
@@ -7,10 +6,6 @@ export const metadata = {
 };
 
 export default function Login() {
-    // Tạo từng bước đăng nhập bằng số điện thoại
-    // const [step, setStep] = useState<1 | 2>(1);
-    // const [phone, setPhone] = useState("");
-
     return (
         <div className="flex-1 w-full max-w-[1440px] mx-auto">
             <div className="grid grid-cols-2 h-full gap-4">
