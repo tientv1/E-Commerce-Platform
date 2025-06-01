@@ -1,0 +1,51 @@
+services:
+    sqlserver:
+        build: ./docker/sqlserver
+        environment:
+            - SA_PASSWORD=${SA_PASSWORD}
+        volumes: # giữ data
+            - sql-data:/var/opt/mssql
+
+    fusionauth:
+        image: fusionauth/fusionauth-app:latest
+        environment:
+            - DATABASE_URL=jdbc:sqlserver://sqlserver:1433;databaseName=fusionauth;user=sa;password=${SA_PASSWORD}
+        ports: ["9011:9011"]
+
+    ecom-user-service:
+        build: ./ecom-user-service
+        environment:
+            - SPRING_DATASOURCE_URL=jdbc:sqlserver://sqlserver:1433;databaseName=ecom_users
+            - SPRING_DATASOURCE_USERNAME=sa
+            - SPRING_DATASOURCE_PASSWORD=${SA_PASSWORD}
+            - fusionauth.base-url=http://fusionauth:9011
+            - fusionauth.api-key=${FA_API_KEY}
+        ports: ["8081:8080"]
+
+    ecom-product-service:
+        build: ./ecom-product-service
+        environment:
+            - SPRING_DATASOURCE_URL=jdbc:sqlserver://sqlserver:1433;databaseName=ecom_products
+            - SPRING_DATASOURCE_USERNAME=sa
+            - SPRING_DATASOURCE_PASSWORD=${SA_PASSWORD}
+        ports: ["8082:8080"]
+
+    ecom-gateway:
+        build: ./ecom-gateway
+        ports: ["8080:8080"]
+
+    ecom-buyer-ui:
+        build: ./ecom-buyer-ui
+        env_file: .env.dev
+        ports: ["3001:3000"]
+
+    ecom-admin-ui:
+        build: ./ecom-admin-ui
+        env_file: .env.dev
+        ports: ["3002:3000"]
+
+volumes:
+    sql-data:
+networks:
+    tientv-ecommerce:
+        external: true
