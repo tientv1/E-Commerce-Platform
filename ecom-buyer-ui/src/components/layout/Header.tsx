@@ -6,7 +6,7 @@ import { CircleUserIcon } from "lucide-react";
 
 export default function Header() {
     return (
-        <header className="w-[100%] flex justify-center py-2 border-b-1 border-[#dddde3] shrink">
+        <header className="w-[100%] flex justify-center py-2 border-b-1 border-[#dddde3] shrink bg-white">
             <div className="w-full max-w-[1440px] flex items-center gap-12">
                 <div className="brand-icon">
                     <BrandIcon />
