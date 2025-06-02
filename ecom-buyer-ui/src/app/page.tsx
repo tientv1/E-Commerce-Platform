@@ -1,72 +1,177 @@
-import { ChevronLeft } from "lucide-react";
-import { ChevronRight } from "lucide-react";
+import Category from "./Category";
 import Image from "next/image";
 
 export default function Home() {
     return (
         <div className="flex-1 w-full max-w-[1440px] mx-auto">
-            <div className="grid grid-cols-1 gap-4 h-[100%] my-2">
+            <div className="grid grid-cols-1 gap-4 my-2">
                 <div className="">
-                    <div className="bg-white">
+                    <div className="bg-white rounded-t-xl">
                         <div className="flex justify-between p-3">
-                            <p>Gợi ý hôm nay</p>
-                            <p>Xem thêm</p>
+                            <p className="font-bold">Gợi ý hôm nay</p>
                         </div>
-                        <div className="flex justify-between items-center w-[100%] gap-4">
-                            <button className="cursor-pointer p-2 rounded-[50%] shadow-xl">
-                                <ChevronLeft width={20} height={20} />
-                            </button>
-                            <div className="w-[100%] flex flex-col justify-center items-center gap-2">
+                        <Category />
+                    </div>
+                    <div className="mt-2 bg-white p-3 rounded-b-xl grid grid-cols-10 gap-4">
+                        <div className="card border-1">
+                            <div className="image-card ">
                                 <Image
-                                    src={"/category-phone.png"}
+                                    src="/category-phone.png"
                                     alt=""
-                                    width={75}
-                                    height={75}
+                                    width={150}
+                                    height={150}
                                 />
-                                <p className="break-all text-center text-sm pb-2">
-                                    Điện thoại
+                            </div>
+                            <div className="px-2 pb-2">
+                                <p className="break-words line-clamp-2 text-sm">
+                                    ádádasasdasdasdasdasdasdasdasdasdasasd
                                 </p>
                             </div>
-                            <div className="w-[100%] flex flex-col justify-center items-center gap-2">
+                            <div>star</div>
+                        </div>
+                        <div className="card border-1">
+                            <div className="image-card ">
                                 <Image
-                                    src={"/category-phone.png"}
+                                    src="/category-phone.png"
                                     alt=""
-                                    width={75}
-                                    height={75}
+                                    width={150}
+                                    height={150}
                                 />
-                                <p className="break-all text-center text-sm pb-2">
-                                    Điện thoại
+                            </div>
+                            <div className="px-2 pb-2">
+                                <p className="break-words line-clamp-2 text-sm">
+                                    ádádasasdasdasdasdasdasdasdasdasdasasd
                                 </p>
                             </div>
-                            <div className="w-[100%] flex flex-col justify-center items-center gap-2">
+                            <div>star</div>
+                        </div>
+                        <div className="card border-1">
+                            <div className="image-card ">
                                 <Image
-                                    src={"/category-phone.png"}
+                                    src="/category-phone.png"
                                     alt=""
-                                    width={75}
-                                    height={75}
+                                    width={150}
+                                    height={150}
                                 />
-                                <p className="break-all text-center text-sm pb-2">
-                                    Điện thoại
+                            </div>
+                            <div className="px-2 pb-2">
+                                <p className="break-words line-clamp-2 text-sm">
+                                    ádádasasdasdasdasdasdasdasdasdasdasasd
                                 </p>
                             </div>
-                            <div className="w-[100%] flex justify-center">
-                                5
+                            <div>star</div>
+                        </div>
+                        <div className="card border-1">
+                            <div className="image-card ">
+                                <Image
+                                    src="/category-phone.png"
+                                    alt=""
+                                    width={150}
+                                    height={150}
+                                />
                             </div>
-                            <div className="w-[100%] flex justify-center">
-                                6
+                            <div className="px-2 pb-2">
+                                <p className="break-words line-clamp-2 text-sm">
+                                    ádádasasdasdasdasdasdasdasdasdasdasasd
+                                </p>
                             </div>
-                            <div className="w-[100%] flex justify-center">
-                                7
+                            <div>star</div>
+                        </div>
+                        <div className="card border-1">
+                            <div className="image-card ">
+                                <Image
+                                    src="/category-phone.png"
+                                    alt=""
+                                    width={150}
+                                    height={150}
+                                />
                             </div>
-                            <div className="w-[100%] flex justify-center">
-                                8
+                            <div className="px-2 pb-2">
+                                <p className="break-words line-clamp-2 text-sm">
+                                    ádádasasdasdasdasdasdasdasdasdasdasasd
+                                </p>
                             </div>
-                            <div className="w-[100%] flex justify-center">
-                                9
+                            <div>star</div>
+                        </div>
+                        <div className="card border-1">
+                            <div className="image-card ">
+                                <Image
+                                    src="/category-phone.png"
+                                    alt=""
+                                    width={150}
+                                    height={150}
+                                />
                             </div>
-                            <div className="cursor-pointer p-2 rounded-[50%] shadow-xl">
-                                <ChevronRight width={20} height={20} />
+                            <div className="px-2 pb-2">
+                                <p className="break-words line-clamp-2 text-sm">
+                                    ádádasasdasdasdasdasdasdasdasdasdasasd
+                                </p>
                             </div>
+                            <div>star</div>
+                        </div>
+                        <div className="card border-1">
+                            <div className="image-card ">
+                                <Image
+                                    src="/category-phone.png"
+                                    alt=""
+                                    width={150}
+                                    height={150}
+                                />
+                            </div>
+                            <div className="px-2 pb-2">
+                                <p className="break-words line-clamp-2 text-sm">
+                                    ádádasasdasdasdasdasdasdasdasdasdasasd
+                                </p>
+                            </div>
+                            <div>star</div>
+                        </div>
+                        <div className="card border-1">
+                            <div className="image-card ">
+                                <Image
+                                    src="/category-phone.png"
+                                    alt=""
+                                    width={150}
+                                    height={150}
+                                />
+                            </div>
+                            <div className="px-2 pb-2">
+                                <p className="break-words line-clamp-2 text-sm">
+                                    ádádasasdasdasdasdasdasdasdasdasdasasd
+                                </p>
+                            </div>
+                            <div>star</div>
+                        </div>
+                        <div className="card border-1">
+                            <div className="image-card ">
+                                <Image
+                                    src="/category-phone.png"
+                                    alt=""
+                                    width={150}
+                                    height={150}
+                                />
+                            </div>
+                            <div className="px-2 pb-2">
+                                <p className="break-words line-clamp-2 text-sm">
+                                    ádádasasdasdasdasdasdasdasdasdasdasasd
+                                </p>
+                            </div>
+                            <div>star</div>
+                        </div>
+                        <div className="card border-1">
+                            <div className="image-card ">
+                                <Image
+                                    src="/category-phone.png"
+                                    alt=""
+                                    width={150}
+                                    height={150}
+                                />
+                            </div>
+                            <div className="px-2 pb-2">
+                                <p className="break-words line-clamp-2 text-sm h-[40px]">
+                                    ádádasasdasda
+                                </p>
+                            </div>
+                            <div>star</div>
                         </div>
                     </div>
                 </div>
