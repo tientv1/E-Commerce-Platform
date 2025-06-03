@@ -12,7 +12,7 @@ export default function Button({
     return (
         <Link
             href={url}
-            className="text-[14px] text-[#02735E] flex items-center justify-center gap-2 max-w-[100px] w-full rounded-[10px] p-1.5 hover:bg-[#02735e2d] focus:outline-none"
+            className="text-[14px] text-[#02735E] flex items-center justify-center gap-2 max-w-[110px] w-full rounded-[10px] p-2 hover:bg-[#02735e2d] focus:outline-none"
         >
             {icon}
             {text}
