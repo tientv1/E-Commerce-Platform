@@ -15,10 +15,6 @@ services:
         volumes:
             - ./ecom-gateway:/app
             - /app/target
-        environment:
-            SPRING_DATASOURCE_URL: jdbc:sqlserver://sqlserver:1433;databaseName=ecom_users
-            SPRING_DATASOURCE_USERNAME: sa
-            SPRING_DATASOURCE_PASSWORD: tientv@123
         depends_on:
             - sqlserver
 
@@ -29,10 +25,8 @@ services:
         volumes:
             - ./ecom-user-service:/app
             - /app/target
-        environment:
-            SPRING_DATASOURCE_URL: jdbc:sqlserver://sqlserver:1433;databaseName=ecom_users
-            SPRING_DATASOURCE_USERNAME: sa
-            SPRING_DATASOURCE_PASSWORD: tientv@123
+        env_file:
+            - ./ecom-user-service/.env
         depends_on:
             - sqlserver
 
@@ -43,10 +37,8 @@ services:
         volumes:
             - ./ecom-product-service:/app
             - /app/target
-        environment:
-            SPRING_DATASOURCE_URL: jdbc:sqlserver://sqlserver:1433;databaseName=ecom_products
-            SPRING_DATASOURCE_USERNAME: sa
-            SPRING_DATASOURCE_PASSWORD: tientv@123
+        env_file:
+            - ./ecom-product-service/.env
         depends_on:
             - sqlserver
 
