@@ -1,0 +1,22 @@
+server:
+    port: 8080
+
+spring:
+    cloud:
+        gateway:
+            server:
+                webflux:
+                    routes:
+                        - id: user-route
+                          uri: ${domains.ecom-user-service}
+                          predicates:
+                            - Path=/users/**
+
+    security:
+      oauth2:
+        resourceserver:
+          jwt:
+              jwk-set-uri: https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com
+
+domains:
+    ecom-user-service: http://ecom-user-service:8080
