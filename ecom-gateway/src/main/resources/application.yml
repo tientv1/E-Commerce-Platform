@@ -5,12 +5,13 @@ spring:
     cloud:
         gateway:
             server:
-                webflux:
+                webmvc:
                     routes:
                         - id: user-route
                           uri: ${domains.ecom-user-service}
                           predicates:
                             - Path=/users/**
+
 
     security:
       oauth2:
