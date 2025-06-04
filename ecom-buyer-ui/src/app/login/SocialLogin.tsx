@@ -14,7 +14,7 @@ export default function SocialLogin() {
         try {
             const result = await signInWithPopup(auth, googleProvider);
             const idToken = await result.user.getIdToken();
-
+            console.log("🔥 ID Token:", idToken);
             await axios.post(
                 "http://localhost:8080/api/users/google",
                 { idToken },
