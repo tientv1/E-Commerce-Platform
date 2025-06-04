@@ -8,7 +8,7 @@ spring:
                 webmvc:
                     routes:
                         - id: user-route
-                          uri: ${http://ecom-user-service:8080}
+                          uri: http://ecom-user-service:8080
                           predicates:
                               - Path=/api/users/**
 
